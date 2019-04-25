@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# minu muljed
+
+echo "Aron Aland"
+echo "ISP218"
+echo -n "Skriptimine on huvitav tegevus, see arendab loogilist mõtlemist. "
+echo "Skriptimisega saab lahendada probleeme ja teha lahedaid programme."
+echo "Ma olen väga rahul!"
+
+# skripti lõpp
