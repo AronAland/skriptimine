@@ -1,0 +1,7 @@
+#!/bin/bash
+# Minu esimene skript
+
+
+echo -n "Tere, " #väljastame teksti Tere ilma reavahetuseta (-n)
+echo -n "User" #väljastame teksti User ilma reavahetuseta (-n)
+echo "!" #väljastame hüüumärgi 
