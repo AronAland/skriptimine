@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# tervitab kasutajat ja näitab tänast kuupäeva.
+
+# tänane kuupäev
+kuupäev() {
+	echo $(date +"%x")
+}
+
+
+# tervitab kasutajat kasutades parameetrit
+tervitus() {
+	echo -n "Tere, "
+	echo -n $1
+	echo "!"
+	kuupäev
+}
+
+# tervitab kasutajat kasutades tervitus funktsiooni
+# ja lisades atribuudi
+tervitus $(whoami)
+
+# skripti lõpp
