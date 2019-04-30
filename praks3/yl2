@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# skript, mis otsib var kataloogis kasutajale kättesaadavad
+# .log lõpuga failid, kontrollib mitu rida on igas leitud 
+# failis ning väljastab failide nimekirja
+
+wc -l $(find /var/log -name '*.log' 2>/dev/null) 2>/dev/null > lines
+#  otsime /var/log kataloogist faile, mis lõppeb .log ning loeme read 
+# ja väljastame need faili nimega lines
+
+sort -n -r lines #sordime faili nimega lines
+
+#skripti lõpp
