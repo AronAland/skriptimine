@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# kasutajate nimed
+#
+who | cut -f1 -d' ' | cut -f2 -d'.' > eesnimi
+who | cut -f2 -d' ' | cut -f1 -d'.'> perenimi
+paste -d'.' perenimi eesnimi > nimed
+more nimed | sort | uniq
+#
+#lõpp
