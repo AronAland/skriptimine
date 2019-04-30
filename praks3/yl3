@@ -2,8 +2,8 @@
 
 # skript, mis väljastab mitu päeva antud masin on tööl
 
-echo -n "skriptimine at "
 echo -n $(hostname) #väljastab masinanime
+echo -n " at"
 uptime | cut -d',' -f 1 #väljastab uptime ja lõikab sellest ainult esimese
 # osa enne koma
 
