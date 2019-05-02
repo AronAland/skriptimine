@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#skript küsib nime ja sünniaja ning arvutab tema vanuse
+
+echo -n "Sisesta oma nimi:"
+read nimi
+
+echo "Tere tulemast, $nimi!"
+
+echo -n "Sisesta oma sünniaasta:"
+read synniaasta
+
+aasta=$(date +'%Y') #võtame hetkese aasta
+vanus=$(expr $((aasta - synniaasta))) #lahutame aastast sünniaasta
+echo "$nimi, sina oled $vanus aastane."
+
+#skript lõpp
