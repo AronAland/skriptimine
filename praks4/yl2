@@ -23,7 +23,8 @@ read kypsised
 
 h=$(expr $pikkus / $k_pikkus) #mitu küpsist kulub ühte pidi
 v=$(expr $laius / $k_laius) #mitu küpsist kulub teist pidi
-kokku=$(expr $(expr $h + $v) \* $kihid) # korrutame kihtide arvuga
+
+kokku=$(expr $(expr $h \* $v) \* $kihid) # korrutame kihtide arvuga
 tulemus=$(expr $kokku / $kypsised) #jagame küpsiste arvuga pakis
 jaak=$(expr $kokku % $kypsised) #mitu küpsist veel vaja on
 echo "Sul on vaja $tulemus küpsisepakki ja $jaak küpsist."
