@@ -16,6 +16,8 @@ if [ $kohad -gt $reisijad ]; then
 else
  maha=$(expr $reisijad % $kohad)
  echo "Täielikult on täidetud $bussi bussi ja maha jääb $maha inimest."
- echo "Kokku oleks vaja $(expr $bussi + 1) bussi, et keegi maha ei jääks."
+ if [ $maha != 0 ]; then
+  echo "Kokku oleks vaja $(expr $bussi + 1) bussi, et keegi maha ei jääks."
+ fi
 fi
 #skripti lõpp
