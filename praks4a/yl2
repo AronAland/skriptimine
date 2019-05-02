@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#skript, mis arvutab ringi pindala ja ümbermõõdu.
+
+echo -n "Sisesta ringi raadius (cm):"
+read ringiraadius
+
+#arvutame ringi pindala ja ümbermõõdu kasutades bc kalkulaatorit.
+pindala=$(echo "3.14 * ($ringiraadius * $ringiraadius)" | bc)
+ymbermoot=$(echo "2 * 3.14 * $ringiraadius" | bc)
+
+echo "Sinu ringi pindala on $pindala ruutsentimeetrit ja ümbermõõt $ymbermoot cm"
+
+#skripti lõpp
