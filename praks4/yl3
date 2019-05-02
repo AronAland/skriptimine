@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#skript abiks bussi ekskursioonide korraldajale
+
+echo -n "Mitu reisijat on grupis?:"
+read reisijad
+
+echo -n "Mitu kohta on bussis?:"
+read kohad
+
+bussi=$(expr $reisijad / $kohad)
+maha=$(expr $reisijad - $(expr $kohad \* $bussi))
+
+if [ $kohad -gt $reisijad ]; then
+ jaak=$(expr $kohad - $reisijad) 
+ echo "Täielikult on täidetud $bussi bussi ja üle jääb $jaak kohta."
+else
+ echo "Täielikult on täidetud $bussi bussi ja maha jääb $maha inimest."
+fi
+#skripti lõpp
