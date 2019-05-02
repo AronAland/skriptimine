@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#skript abiks kokkadele küpsise tordi valmistamiseks.
+
+echo -n "Sisesta aluskandiku pikkus (cm):"
+read pikkus
+
+echo -n "Sisesta aluskandiku laius (cm):"
+read laius
+
+echo -n "Sisesta küpsise pikkus (cm):"
+read k_pikkus
+
+echo -n "Sisesta küpsise laius (cm):"
+read k_laius
+
+echo -n "Mitu kihti tordil on?:"
+read kihid
+
+echo -n "Mitu küpsist on ühes pakis?:"
+read kypsised
+
+
+h=$(expr $pikkus / $k_pikkus) #mitu küpsist kulub ühte pidi
+v=$(expr $laius / $k_laius) #mitu küpsist kulub teist pidi
+kokku=$(expr $(expr $h + $v) \* $kihid) # korrutame kihtide arvuga
+tulemus=$(expr $kokku / $kypsised) #jagame küpsiste arvuga pakis
+echo $tulemus
+
+#skripti lõpp
