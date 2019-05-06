@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#skript backupi tegemiseks
+
+echo "=========[BACKUP]========="
+echo "Sisesta kataloogi nimi:"
+read katalooginimi
+
+baasnimi="$(basename -- $katalooginimi)" #võtame katalooginimest ainult baasnime
+asukoht="/home/user/skriptimine/backup/$baasnimi.backup.tar.gz" #backupi asukoht
+tar -zcvf $asukoht $katalooginimi #loome kokkupakitud faili
+
+echo "Kataloogi $katalooginimi backup'i nimi on $baasnimi.backup.tar.gz ja ta asub $asukoht"
+
+#skripti lõpp
