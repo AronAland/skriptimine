@@ -4,7 +4,8 @@
 
 if [ $# != 1 ]
 then
- echo -e "\033[1;31m[VIGA]:\033[1;37m Käivita see skript koos arvuga, mille paarsust soovid kontrollida. Näiteks: ./paarsus 3"
+ echo -e -n "$(tput setaf 7)$(tput setab 1)[VIGA]:$(tput setab 7)$(tput setaf 0) Käivita see skript koos arvuga, mille paarsust soovid kontrollida. Näiteks: ./paarsus 3"
+ echo -e "$(tput sgr0)" #värvid tagasi normaalseks
 else
  tarv=$1
  jaak=$(($tarv%2))
