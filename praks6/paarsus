@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#skript, mis väljastab, kas arv on paaris või mitte.
+
+if [ $# != 1 ]
+then
+ echo -n "[VIGA]: Käivita see skript koos arvuga, mille paarsust soovid kontrollida. Näiteks: ./paarsus 3"
+else
+ tarv=$1
+ jaak=$(($tarv%2))
+ if [ $jaak == 0 ] 
+ then
+  echo "$tarv on paarisarv."
+ else
+  echo "$tarv on paaritu arv."
+ fi
+fi
